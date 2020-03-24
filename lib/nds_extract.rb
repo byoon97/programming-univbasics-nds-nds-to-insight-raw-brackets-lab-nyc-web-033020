@@ -4,16 +4,17 @@ require 'pp'
 
 def directors_totals(nds)
 
-  result = {
-  }
-  #
-  # Use loops, variables and the accessing method, [], to loop through the NDS
-  # and total up all the
-  # ...
-  # ...
-  # ...
-  #
-  #
-  # Be sure to return the result at the end!
-  nil
+  result = {}
+  i = 0
+  while i < nds.length do
+    director = nds[i][:name]
+      j = 0
+      result[director] = 0
+      while j < nds[i][:movies].length do 
+        result[director] += nds[i][:movies][j][:worldwide_gross]
+        i += 1
+      end
+      i += 1
+  end
+  result
 end
