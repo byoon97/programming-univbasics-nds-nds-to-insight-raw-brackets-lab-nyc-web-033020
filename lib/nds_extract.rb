@@ -3,8 +3,7 @@ require 'directors_database'
 require 'pp'
 
 def directors_totals(nds)
-  pp nds
-  directors_totals(directors_database)
+
   result = {
   }
   #
